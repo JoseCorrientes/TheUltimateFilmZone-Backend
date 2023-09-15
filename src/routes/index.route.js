@@ -10,5 +10,8 @@ router.use("/search", searchList);
 router.use("/favorites", favorite);
 router.use("/category", category);
 router.use("/email", sendMail);
+router.use('/test', (req, res)=>{
+    res.status(200).json({status: 'ok', message: 'El server is on'})
+})
 
 export default router;
